@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # Try adding your own number to this list!
 messages = [
-    "",
     "meh",
     "Never give up, unless defeat arouses that girl in accounting",
     "Ignores previous fortunes",
@@ -46,7 +45,7 @@ messages = [
 def hello_monkey():
     """Respond and greet the caller by name."""
 
-    message = messages[random.randint(1, len(messages))]
+    message = messages[random.randint(0, len(messages))]
 
     resp = twilio.twiml.Response()
     resp.message(message)
